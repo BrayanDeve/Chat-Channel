@@ -3,7 +3,7 @@ import {Input} from '@mui/material'
 import SendIcon from '@mui/icons-material/Send';
 import style from './Chat.module.css'
 
-export default function Chat({socket}) {
+export default function Chat({socket, onClose}) {
 
   const bottomRef = useRef()
   const messageRef = useRef()
@@ -49,7 +49,12 @@ export default function Chat({socket}) {
 
   return (
     <div className={style['chat-container']}>
-      <div className={style['chat-header']}>Chat Channel</div>
+      <div className={style['chat-header']}>
+        <span className={style['chat-header__title']}>Chat Channel</span>
+        {onClose && (
+          <button className={style['chat-header__close']} onClick={onClose} aria-label="Fechar chat">×</button>
+        )}
+      </div>
       <div className={style["chat-body"]}>
       {
         messageList.map((message,index) => (
@@ -63,7 +68,7 @@ export default function Chat({socket}) {
       </div>
       <div className={style["chat-footer"]}>
         <Input inputRef={messageRef} placeholder='Mensagem' onKeyDown={(e)=>getEnterKey(e)} fullWidth />
-        <SendIcon sx={{cursor: 'pointer', color: '#6366f1'}} onClick={()=>handleSubmit()} />
+        <SendIcon sx={{cursor: 'pointer', color: '#111827'}} onClick={()=>handleSubmit()} />
       </div>
     </div>
   )
