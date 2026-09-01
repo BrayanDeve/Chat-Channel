@@ -10,21 +10,46 @@
 .chat-header {
   padding: 18px 20px;
   border-bottom: 1px solid #ececf5;
-  font-weight: 600;
-  font-size: 1.05rem;
-  color: #1e1b4b;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.chat-header__title {
   display: flex;
   align-items: center;
   gap: 8px;
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: #1e1b4b;
 }
 
-.chat-header::before {
+.chat-header__title::before {
   content: '';
   width: 8px;
   height: 8px;
   border-radius: 50%;
   background: #22c55e;
   flex-shrink: 0;
+}
+
+.chat-header__close {
+  border: none;
+  background: rgba(17, 24, 39, 0.06);
+  color: #4b5563;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  font-size: 1.1rem;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chat-header__close:hover {
+  background: rgba(17, 24, 39, 0.12);
 }
 
 .chat-body{
@@ -53,13 +78,13 @@
   display: block;
   font-size: 0.72rem;
   font-weight: 600;
-  color: #6366f1;
+  color: #111827;
   margin-bottom: 2px;
 }
 
 .message-mine{
   align-self: flex-end;
-  background-color: #6366f1;
+  background-color: #111827;
   color: #fff;
 }
 

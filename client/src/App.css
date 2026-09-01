@@ -44,3 +44,59 @@ body {
   flex-direction: column;
   border-left: 1px solid #ececf5;
 }
+
+/* Variante launcher (fechado por padrão, abre por clique) */
+.app-shell--launcher {
+  position: relative;
+}
+
+.app-shell--launcher .host-placeholder {
+  border-radius: 20px;
+}
+
+.chat-channel-launcher {
+  position: absolute;
+  right: 28px;
+  bottom: 28px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 999px;
+  background: #111827;
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  box-shadow: 0 14px 28px -10px rgba(17, 24, 39, 0.6);
+  transition: transform 0.15s ease;
+}
+
+.chat-channel-launcher:hover {
+  transform: translateY(-2px);
+}
+
+.chat-channel-launcher__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #4ade80;
+  flex-shrink: 0;
+}
+
+.chat-channel-launcher-panel {
+  position: absolute;
+  right: 28px;
+  bottom: 28px;
+  width: 340px;
+  height: 480px;
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 24px 50px -16px rgba(30, 27, 75, 0.4);
+}
+
