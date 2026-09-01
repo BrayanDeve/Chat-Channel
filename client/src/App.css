@@ -1,0 +1,46 @@
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at top, #eef0ff 0%, #f6f7fb 60%);
+}
+
+.app-shell {
+  display: flex;
+  width: min(1000px, 92vw);
+  height: min(640px, 88vh);
+  background: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 30px 60px -20px rgba(30, 27, 75, 0.25);
+}
+
+.host-placeholder {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  color: #9295a6;
+  background: repeating-linear-gradient(45deg, #fafafe, #fafafe 10px, #f2f2fb 10px, #f2f2fb 20px);
+  padding: 2rem;
+  text-align: center;
+}
+
+.host-placeholder strong {
+  color: #4b4f6b;
+  font-size: 1.05rem;
+}
+
+.chat-channel-dock {
+  width: 360px;
+  flex-shrink: 0;
+  height: 100%;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid #ececf5;
+}
